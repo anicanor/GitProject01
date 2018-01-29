@@ -78,7 +78,7 @@ void print(int biggest, int size){
     for(int i = biggest; i >= 1; i--){
         
         //Sets up the rows
-        for(int o = 0; o < size; o++){
+        for(int o = 0; o < size-1; o++){
             
             //Determines which spot needs a star and which needs a space
             if (i <= starArray[o]){
