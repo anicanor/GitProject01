@@ -31,15 +31,15 @@ int main(){
 }
 
 int fill(){
-
-    //Fills out the Array
     
     int input, size = 0;
     
+    //Keeps getting the user's input and puts it into the array until they type zero
     do{
         
         cin >> input;
         
+        //Ignores any negative numbers
         if (input >= 0){
             
             starArray[size] = input;
@@ -55,9 +55,9 @@ int fill(){
 
 int largest(int size){
 
-    //Gets biggest number in Array
     int biggest = 0;
     
+    //Searches through the entire array updating the biggest number
     for(int i = 0; i <= size; i++){
         
         if(biggest < starArray[i]){
@@ -73,12 +73,14 @@ int largest(int size){
 }
 
 void print(int biggest, int size){
-
-    //Prints out the Array
+    
+    //Works its way down when placing the stars and spaces. "The columns"
     for(int i = biggest; i >= 1; i--){
         
-        for(int o = 0; o <= size; o++){
+        //Sets up the rows
+        for(int o = 0; o < size; o++){
             
+            //Determines which spot needs a star and which needs a space
             if (i <= starArray[o]){
                 
                 cout<<"*";
